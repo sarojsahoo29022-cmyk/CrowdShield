@@ -91,15 +91,15 @@ function useApiData<T>(path: string, fallback: T, intervalMs: number = 5000) {
 
   useEffect(() => {
     activeRef.current = true
-    executeFetch()
-
     const timer = setInterval(() => {
       executeFetch()
     }, intervalMs)
+    const init = setTimeout(executeFetch, 0)
 
     return () => {
       activeRef.current = false
       clearInterval(timer)
+      clearTimeout(init)
     }
   }, [executeFetch, intervalMs])
 
