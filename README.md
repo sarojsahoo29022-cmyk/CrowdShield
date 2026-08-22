@@ -152,6 +152,20 @@ When presenting CrowdShield to judges, follow this live demonstration path:
 
 ---
 
+## 📸 Screenshots
+
+| View | Description |
+|------|-------------|
+| ![Operational Overview](./public/screenshots/overview.png) | Live 3D venue map with density extrusion and risk pulsing |
+| ![Live Map](./public/screenshots/live-map.png) | Interactive zone focusing, telemetry overlays, and layer controls |
+| ![Risk & Recommendations](./public/screenshots/recommendations.png) | AI command recommendation, zone detail panel, and command audit log |
+
+> Add screenshots to `public/screenshots/` (PNG, ~1280×800).
+
+## 🔗 Live Demo
+
+Deploy on [Vercel](https://vercel.com/) and paste the production URL here.
+
 ## 🔒 Security Best Practices
 
 - `SUPABASE_SERVICE_ROLE_KEY` is kept **server-only** using the `server-only` package and is never exposed to browser code.
