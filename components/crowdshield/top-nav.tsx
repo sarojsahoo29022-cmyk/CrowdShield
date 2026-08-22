@@ -8,7 +8,7 @@ import { useAuth, ROLE_PROFILES, type UserRole } from '@/lib/auth-context'
 import { useEvent, useZones } from '@/lib/hooks'
 
 export function TopNav() {
-  const [now, setNow] = useState<Date>(() => new Date())
+  const [now, setNow] = useState<Date | null>(null)
   const { data: event } = useEvent()
   const { source, refetch, lastUpdated } = useZones()
   const { user, setRole } = useAuth()
